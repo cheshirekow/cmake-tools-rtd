@@ -1,0 +1,14 @@
+usage: ctest-to [-h] [--log-level {debug,info,warning,error}] [--json | --xml]
+                [directory]
+
+Parse ctest testfiles and re-emit the test specification in a more structured
+format.
+
+positional arguments:
+  directory
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --log-level {debug,info,warning,error}
+  --json
+  --xml
