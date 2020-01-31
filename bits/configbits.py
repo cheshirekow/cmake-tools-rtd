@@ -94,15 +94,6 @@ with section("format"):
   # documentation for more information.
   layout_passes = {}
 
-  # Allow up to this many superfluous newlines between elements at block level.
-  # In other words, don't collapse whitespace up to  (allow_superfluous_newlines
-  # + 1) lines long.
-  allow_superfluous_newlines = 0
-
-  # Output additional newlines to increase visual separation before a statement
-  # which is immediately preceeded by a block comment
-  numlines_pre_statement_comment = 0
-
 # ------------------------------------------------
 # Options affecting comment reflow and formatting.
 # ------------------------------------------------

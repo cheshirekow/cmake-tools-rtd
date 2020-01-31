@@ -13,13 +13,13 @@ v0.6.8
 * Add build rules to generate variable and property pattern lists
 * Implement lint checks on assignment/use of variables that are "close" to
   builtins except for case.
-* Add configuration options to allow increased whitespace in general or
-  before statement comments in particular
 * Move first_token from configuration object into format context
 * Add line, col info to lex error message
 * Fix wrong root parser for FetchContent_MakeAvailable
 * Fix missing support for string integer npargs
 * Fix missing spec for derived classes of PositionalGroupNode
+* Fix on/off switch doesn't work inside a statement
+* Fix extraneous whitespace inserted before line comment in some statements
 * Add more helpful error message on failed configfile parse
 * Move documentation build to build time and push documentation artifacts
   to an artifact repository
@@ -28,7 +28,7 @@ v0.6.8
 * Closes `#163`: cmake-lint crashes when using `VERBATIM` in
   `add_custom_target`
 * Closes `#164`: Internal error FetchContent_MakeAvailable
-* Closes: 000bf9a, 85a3985, 9a3afa6, cf4570e
+* Closes: 000bf9a, 6e4ef70, 85a3985, 9a3afa6, cf4570e
 
 .. _#162: https://github.com/cheshirekow/cmake_format/issues/162
 .. _#163: https://github.com/cheshirekow/cmake_format/issues/163

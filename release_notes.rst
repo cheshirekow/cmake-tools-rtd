@@ -19,10 +19,14 @@ also two new configuration options ``vartags`` and ``proptags`` that can
 be used to affect how the parser and formatter treat certain variables and
 properties.
 
-The documentation build has gotten a little more complicated. Generated
-documentation sources are no longer committed to the repository. Instead, they
-are pushed to a sepearate staging repository from which the read-the-docs pages
-are built.
+Line comments within a statement are now consumed the same as line comments at
+block-scope. This means that your multiline mid-statement comments will be
+reflowed whereas they would previously have been left alone.
+
+The CI Build has gotten a little more complicated. Generated documentation
+sources are no longer committed to the repository. Instead, they are pushed to
+a separate staging repository from which the read-the-docs pages are built.
+
 
 ------
 v0.6.7
