@@ -5,6 +5,8 @@
 Lint Code Reference
 ===================
 
+.. _C0102:
+
 -----
 C0102
 -----
@@ -34,6 +36,8 @@ specified with the bad-names option. This message is raised whenever a name is
 in the list of names defined with the bad-names option.
 
 
+.. _C0103:
+
 -----
 C0103
 -----
@@ -61,6 +65,8 @@ explanation
 The naming convention is defined with a regular expression, and the naming
 convention is satisfied if the name matches the regular expression.
 
+
+.. _C0111:
 
 -----
 C0111
@@ -93,6 +99,8 @@ semantics of those arguements? You should include documentation in a comment
 block prior to the function declaration with this information.
 
 
+.. _C0112:
+
 -----
 C0112
 -----
@@ -122,6 +130,8 @@ include some useful documentation so that code readers know what your
 function/macro does and how to use it.
 
 
+.. _C0113:
+
 -----
 C0113
 -----
@@ -133,6 +143,8 @@ message
 
     Missing {:s} in statement which allows it
 
+
+.. _C0114:
 
 -----
 C0114
@@ -166,6 +178,8 @@ there is no reason to do this and it really hurts readability since different
 descriminator keywords yield essentially different commands.
 
 
+.. _C0201:
+
 -----
 C0201
 -----
@@ -184,6 +198,8 @@ description
 Used when custom parse logic is detected.
 
 
+.. _C0202:
+
 -----
 C0202
 -----
@@ -195,6 +211,8 @@ message
 
     Argument name {:s} differs from existing argument only in case
 
+
+.. _C0301:
 
 -----
 C0301
@@ -229,6 +247,8 @@ Note that the line length and the limit are counted in characters, not in Bytes
 needed to represent these characters.
 
 
+.. _C0303:
+
 -----
 C0303
 -----
@@ -257,6 +277,8 @@ Such trailing whitespace is visually indistinguishable and some editors will
 trim them.
 
 
+.. _C0304:
+
 -----
 C0304
 -----
@@ -284,6 +306,8 @@ While cmake itself does not require line end character(s) on the last line,
 is simply good practice to have it.
 
 
+.. _C0305:
+
 -----
 C0305
 -----
@@ -296,6 +320,8 @@ message
     {:s} newlines between statements
 
 
+.. _C0321:
+
 -----
 C0321
 -----
@@ -307,6 +333,8 @@ message
 
     Multiple statements on a single line
 
+
+.. _C0327:
 
 -----
 C0327
@@ -336,6 +364,8 @@ While cmake itself does not enforce a particular line ending, it is good
 practice for a project to be consist with their line endings.
 
 
+.. _E0011:
+
 -----
 E0011
 -----
@@ -360,6 +390,8 @@ explanation
 cmake-lint allows for some inline comments to supress warnings (among other
 things). This lint is emitted if a bad option key is provided in such a pragma
 
+
+.. _E0012:
 
 -----
 E0012
@@ -390,6 +422,8 @@ things). This lint is emitted if a bad option is provided to one of these
 pragmas.
 
 
+.. _E0103:
+
 -----
 E0103
 -----
@@ -410,6 +444,8 @@ Used when a break() or continue() statement is used outside a loop.
 This message belongs to the basic checker.
 
 
+.. _E0108:
+
 -----
 E0108
 -----
@@ -422,6 +458,8 @@ message
     Duplicate argument name {:s} in function/macro definition
 
 
+.. _E0109:
+
 -----
 E0109
 -----
@@ -433,6 +471,8 @@ message
 
     Invalid argument name {:s} in function/macro definition
 
+
+.. _E1120:
 
 -----
 E1120
@@ -455,6 +495,8 @@ is closed (by a parenthesis) before that number of arguments is found.
 This message belongs to the basic checker.
 
 
+.. _E1121:
+
 -----
 E1121
 -----
@@ -474,6 +516,8 @@ Used when a positional argument is found when no argument group is expected.
 
 This message is implemented by individual command checkers
 
+
+.. _E1122:
 
 -----
 E1122
@@ -495,6 +539,8 @@ Used when a keyword shows up more than once within an argument group. In
 general, only COMMAND is allowed more than once.
 
 
+.. _E1125:
+
 -----
 E1125
 -----
@@ -506,6 +552,8 @@ message
 
     Missing required keyword argument {:s}
 
+
+.. _E1126:
 
 -----
 E1126
@@ -527,6 +575,8 @@ Used when a keyword used to descriminate between different command forms is
 ommitted.
 
 
+.. _R0911:
+
 -----
 R0911
 -----
@@ -538,6 +588,8 @@ message
 
     Too many return statements {:d}/{:d}
 
+
+.. _R0912:
 
 -----
 R0912
@@ -551,6 +603,8 @@ message
     Too many branches {:d}/{:d}
 
 
+.. _R0913:
+
 -----
 R0913
 -----
@@ -562,6 +616,8 @@ message
 
     Too many named arguments {:d}/{:d}
 
+
+.. _R0914:
 
 -----
 R0914
@@ -575,6 +631,8 @@ message
     Too many local variables {:d}/{:d}
 
 
+.. _R0915:
+
 -----
 R0915
 -----
@@ -586,6 +644,8 @@ message
 
     Too many statements {:d}/{:d}
 
+
+.. _W0101:
 
 -----
 W0101
@@ -599,6 +659,8 @@ message
     Unreachable code
 
 
+.. _W0104:
+
 -----
 W0104
 -----
@@ -610,6 +672,8 @@ message
 
     Use of deprecated command {:s}
 
+
+.. _W0105:
 
 -----
 W0105

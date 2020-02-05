@@ -21,16 +21,13 @@ optional arguments:
   -c CONFIG_FILES [CONFIG_FILES ...], --config-files CONFIG_FILES [CONFIG_FILES ...]
                         path to configuration file(s)
 
-Various configuration options/parameters for formatting:
-    
-
 Options affecting listfile parsing:
   --vartags [VARTAGS [VARTAGS ...]]
                         Specify variable tags.
   --proptags [PROPTAGS [PROPTAGS ...]]
                         Specify property tags.
 
-Options effecting formatting.:
+Options affecting formatting.:
   --line-width LINE_WIDTH
                         How wide to allow formatted cmake files
   --tab-size TAB_SIZE   How many spaces to tab for indent
@@ -110,10 +107,10 @@ Options affecting comment reflow and formatting.:
                         `None` (disabled).
   --fence-pattern FENCE_PATTERN
                         Regular expression to match preformat fences in
-                        comments default=r'^\s*([`~]{3}[`~]*)(.*)$'
+                        comments default= ``r'^\s*([`~]{3}[`~]*)(.*)$'``
   --ruler-pattern RULER_PATTERN
                         Regular expression to match rulers in comments
-                        default=r'^\s*[^\w\s]{3}.*[^\w\s]{3}$'
+                        default= ``r'^\s*[^\w\s]{3}.*[^\w\s]{3}$'``
   --explicit-trailing-pattern EXPLICIT_TRAILING_PATTERN
                         If a comment line matches starts with this pattern
                         then it is explicitly a trailing comment for the
@@ -172,7 +169,7 @@ Options affecting the linter:
   --max-localvars MAX_LOCALVARS
   --max-statements MAX_STATEMENTS
 
-Options effecting file encoding:
+Options affecting file encoding:
   --emit-byteorder-mark [EMIT_BYTEORDER_MARK]
                         If true, emit the unicode byte-order mark (BOM) at the
                         start of the file
