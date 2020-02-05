@@ -21,7 +21,7 @@ v0.6.9
 * Closes: `#109`_: Formatting of files containing @VARIBLE@ fails
 * Closes: `#122`_: parse_positionals consumes non-related comments after code
 * Closes: `#168`_: cmake-lint crashes on `add_library` function
-* Closes: 031922e, 5bcc447, c07a668, efba824, 7eb2cb6,
+* Closes: 031922e, 5bcc447, c07a668, efba824, 7eb2cb6
 
 .. _#109: https://github.com/cheshirekow/cmake_format/issues/109
 .. _#122: https://github.com/cheshirekow/cmake_format/issues/122
