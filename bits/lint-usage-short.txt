@@ -1,0 +1,23 @@
+usage: 
+cmake-lint [-h]
+           [--dump-config {yaml,json,python} | -o OUTFILE_PATH]
+           [-c CONFIG_FILE]
+           infilepath [infilepath ...]
+
+Check cmake listfile for lint
+
+positional arguments:
+  infilepaths
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -l {error,warning,info,debug}, --log-level {error,warning,info,debug}
+  --dump-config [{yaml,json,python}]
+                        If specified, print the default configuration to
+                        stdout and exit
+  -o OUTFILE_PATH, --outfile-path OUTFILE_PATH
+                        Write errors to this file. Default is stdout.
+  -c CONFIG_FILES [CONFIG_FILES ...], --config-files CONFIG_FILES [CONFIG_FILES ...]
+                        path to configuration file(s)
+

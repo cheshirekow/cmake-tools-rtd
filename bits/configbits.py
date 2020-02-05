@@ -13,7 +13,7 @@ with section("parse"):
   proptags = []
 
 # -----------------------------
-# Options effecting formatting.
+# Options affecting formatting.
 # -----------------------------
 with section("format"):
 
@@ -114,12 +114,12 @@ with section("markup"):
   # this (regex) pattern. Default is `None` (disabled).
   literal_comment_pattern = None
 
-  # Regular expression to match preformat fences in comments
-  # default=r'^\s*([`~]{3}[`~]*)(.*)$'
+  # Regular expression to match preformat fences in comments default=
+  # ``r'^\s*([`~]{3}[`~]*)(.*)$'``
   fence_pattern = '^\\s*([`~]{3}[`~]*)(.*)$'
 
-  # Regular expression to match rulers in comments
-  # default=r'^\s*[^\w\s]{3}.*[^\w\s]{3}$'
+  # Regular expression to match rulers in comments default=
+  # ``r'^\s*[^\w\s]{3}.*[^\w\s]{3}$'``
   ruler_pattern = '^\\s*[^\\w\\s]{3}.*[^\\w\\s]{3}$'
 
   # If a comment line matches starts with this pattern then it is explicitly a
@@ -192,7 +192,7 @@ with section("lint"):
   max_statements = 50
 
 # -------------------------------
-# Options effecting file encoding
+# Options affecting file encoding
 # -------------------------------
 with section("encode"):
 
