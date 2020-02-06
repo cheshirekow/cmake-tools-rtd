@@ -4,7 +4,13 @@
 with section("parse"):
 
   # Specify structure for custom cmake functions
-  additional_commands = {'pkg_find': {'kwargs': {'PKG': '*'}}}
+  additional_commands = { 'format_and_lint': { 'kwargs': { 'CC': '*',
+                                     'CCDEPENDS': '*',
+                                     'CMAKE': '*',
+                                     'EXCLUDE': '*',
+                                     'JS': '*',
+                                     'PY': '*'}},
+    'pkg_find': {'kwargs': {'PKG': '*'}}}
 
   # Specify variable tags.
   vartags = []
