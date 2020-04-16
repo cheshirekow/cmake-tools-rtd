@@ -2110,7 +2110,7 @@ default value:
 
 .. code::
 
-  1
+  2
 
 command-line option:
 --------------------
@@ -2133,7 +2133,7 @@ config-file entry:
   with section("lint"):
   
     # Require no more than this many newlines between statements
-    max_statement_spacing = 1
+    max_statement_spacing = 2
   
   
 

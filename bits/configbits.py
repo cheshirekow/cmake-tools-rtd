@@ -240,7 +240,7 @@ with section("lint"):
   min_statement_spacing = 1
 
   # Require no more than this many newlines between statements
-  max_statement_spacing = 1
+  max_statement_spacing = 2
   max_returns = 6
   max_branches = 12
   max_arguments = 5

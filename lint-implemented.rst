@@ -47,7 +47,7 @@ message
 
 .. code:: 
 
-    Invalid {:s} name "{:s}"
+    Invalid {:s} name "{:s}" doesn't match `{:s}`
 
 
 description
