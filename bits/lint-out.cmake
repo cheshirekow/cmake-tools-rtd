@@ -7,8 +7,8 @@ cmake_lint/test/expect_lint.cmake:08,00: [C0111] Missing docstring on function o
 cmake_lint/test/expect_lint.cmake:08,00: [C0305] too many newlines between statements
 cmake_lint/test/expect_lint.cmake:08,09: [C0103] Invalid function name "BAD_FUNCTION_NAME" doesn't match `[0-9a-z_]+`
 cmake_lint/test/expect_lint.cmake:13,00: [C0112] Empty docstring on function or macro declaration
-cmake_lint/test/expect_lint.cmake:13,06: [C0103] Invalid function name "bad_macro_name" doesn't match `[0-9A-Z_]+`
-cmake_lint/test/expect_lint.cmake:24,10: [C0103] Invalid loopvar name "LOOPVAR3" doesn't match `[0-9a-z_]+`
+cmake_lint/test/expect_lint.cmake:13,06: [C0103] Invalid macro name "bad_macro_name" doesn't match `[0-9A-Z_]+`
+cmake_lint/test/expect_lint.cmake:24,10: [C0103] Invalid argument name "LOOPVAR3" doesn't match `[a-z][a-z0-9_]+`
 cmake_lint/test/expect_lint.cmake:30,27: [E1120] Missing required positional argument
 cmake_lint/test/expect_lint.cmake:30,33: [E1120] Missing required positional argument
 cmake_lint/test/expect_lint.cmake:32,46: [E1122] Duplicate keyword argument VERSION
@@ -35,14 +35,14 @@ cmake_lint/test/expect_lint.cmake:100,00: [R0911] Too many return statements 17/
 cmake_lint/test/expect_lint.cmake:100,00: [R0912] Too many branches 17/12
 cmake_lint/test/expect_lint.cmake:100,00: [R0913] Too many named arguments 6/5
 cmake_lint/test/expect_lint.cmake:100,00: [R0915] Too many statements 65/50
-cmake_lint/test/expect_lint.cmake:132,04: [C0103] Invalid CACHE variable name "MyGlobalVar" doesn't match `[0-9A-Z][0-9A-Z_]+`
-cmake_lint/test/expect_lint.cmake:135,04: [C0103] Invalid INTERNAL variable name "MY_INTERNAL_VAR" doesn't match `_[0-9A-Z][0-9A-Z_]+`
-cmake_lint/test/expect_lint.cmake:138,04: [C0103] Invalid directory variable name "_INVALID_PRIVATE_NAME" doesn't match `[0-9A-Z][0-9A-Z_]+|_[0-9a-z_]+`
-cmake_lint/test/expect_lint.cmake:139,04: [C0103] Invalid directory variable name "invalid_public_name" doesn't match `[0-9A-Z][0-9A-Z_]+|_[0-9a-z_]+`
-cmake_lint/test/expect_lint.cmake:141,06: [C0103] Invalid local variable name "INVALID_LOCAL_NAME" doesn't match `[0-9a-z_]+`
+cmake_lint/test/expect_lint.cmake:132,04: [C0103] Invalid CACHE variable name "MyGlobalVar" doesn't match `[A-Z][0-9A-Z_]+`
+cmake_lint/test/expect_lint.cmake:135,04: [C0103] Invalid INTERNAL variable name "MY_INTERNAL_VAR" doesn't match `_[A-Z][0-9A-Z_]+`
+cmake_lint/test/expect_lint.cmake:138,04: [C0103] Invalid directory variable name "_INVALID_PRIVATE_NAME" doesn't match `[A-Z][0-9A-Z_]+|_[0-9a-z_]+`
+cmake_lint/test/expect_lint.cmake:139,04: [C0103] Invalid directory variable name "invalid_public_name" doesn't match `[A-Z][0-9A-Z_]+|_[0-9a-z_]+`
+cmake_lint/test/expect_lint.cmake:141,06: [C0103] Invalid local variable name "INVALID_LOCAL_NAME" doesn't match `[a-z][a-z0-9_]+`
 cmake_lint/test/expect_lint.cmake:144,04: [W0105] Assignment to variable 'CMAKE_Cxx_STANDARD' which matches a built-in except for case
 cmake_lint/test/expect_lint.cmake:146,12: [W0105] Assignment to variable 'CMAKE_Cxx_STANDARD' which matches a built-in except for case
-cmake_lint/test/expect_lint.cmake:148,08: [W0105] Assignment to variable 'CMAKE_Cxx_STANDARD' which matches a built-in except for case
+cmake_lint/test/expect_lint.cmake:148,08: [W0105] Reference to variable 'CMAKE_Cxx_STANDARD' which matches a built-in except for case
 cmake_lint/test/expect_lint.cmake:150: [C0304] Final newline missing
 
 Summary

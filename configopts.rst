@@ -1784,14 +1784,14 @@ config-file entry:
 global_var_pattern
 ==================
 
-regular expression pattern describing valid names for variables with global scope
+regular expression pattern describing valid names for variables with global (cache) scope
 
 default value:
 --------------
 
 .. code::
 
-  '[0-9A-Z][0-9A-Z_]+'
+  '[A-Z][0-9A-Z_]+'
 
 command-line option:
 --------------------
@@ -1800,7 +1800,7 @@ command-line option:
 
      --global-var-pattern GLOBAL_VAR_PATTERN
                            regular expression pattern describing valid names for
-                           variables with global scope
+                           variables with global (cache) scope
    
 
 config-file entry:
@@ -1814,8 +1814,8 @@ config-file entry:
   with section("lint"):
   
     # regular expression pattern describing valid names for variables with global
-    # scope
-    global_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+    # (cache) scope
+    global_var_pattern = '[A-Z][0-9A-Z_]+'
   
   
 
@@ -1831,7 +1831,7 @@ default value:
 
 .. code::
 
-  '_[0-9A-Z][0-9A-Z_]+'
+  '_[A-Z][0-9A-Z_]+'
 
 command-line option:
 --------------------
@@ -1855,7 +1855,7 @@ config-file entry:
   
     # regular expression pattern describing valid names for variables with global
     # scope (but internal semantic)
-    internal_var_pattern = '_[0-9A-Z][0-9A-Z_]+'
+    internal_var_pattern = '_[A-Z][0-9A-Z_]+'
   
   
 
@@ -1871,7 +1871,7 @@ default value:
 
 .. code::
 
-  '[0-9a-z_]+'
+  '[a-z][a-z0-9_]+'
 
 command-line option:
 --------------------
@@ -1895,7 +1895,7 @@ config-file entry:
   
     # regular expression pattern describing valid names for variables with local
     # scope
-    local_var_pattern = '[0-9a-z_]+'
+    local_var_pattern = '[a-z][a-z0-9_]+'
   
   
 
@@ -1944,14 +1944,14 @@ config-file entry:
 public_var_pattern
 ==================
 
-regular expression pattern describing valid names for publicdirectory variables
+regular expression pattern describing valid names for public directory variables
 
 default value:
 --------------
 
 .. code::
 
-  '[0-9A-Z][0-9A-Z_]+'
+  '[A-Z][0-9A-Z_]+'
 
 command-line option:
 --------------------
@@ -1960,7 +1960,7 @@ command-line option:
 
      --public-var-pattern PUBLIC_VAR_PATTERN
                            regular expression pattern describing valid names for
-                           publicdirectory variables
+                           public directory variables
    
 
 config-file entry:
@@ -1973,9 +1973,49 @@ config-file entry:
   # ----------------------------
   with section("lint"):
   
-    # regular expression pattern describing valid names for publicdirectory
+    # regular expression pattern describing valid names for public directory
     # variables
-    public_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+    public_var_pattern = '[A-Z][0-9A-Z_]+'
+  
+  
+
+.. _argument_var_pattern:
+
+argument_var_pattern
+====================
+
+regular expression pattern describing valid names for function/macro arguments and loop variables.
+
+default value:
+--------------
+
+.. code::
+
+  '[a-z][a-z0-9_]+'
+
+command-line option:
+--------------------
+
+.. code:: 
+
+     --argument-var-pattern ARGUMENT_VAR_PATTERN
+                           regular expression pattern describing valid names for
+                           function/macro arguments and loop variables.
+   
+
+config-file entry:
+------------------
+
+.. code:: 
+
+  # ----------------------------
+  # Options affecting the linter
+  # ----------------------------
+  with section("lint"):
+  
+    # regular expression pattern describing valid names for function/macro
+    # arguments and loop variables.
+    argument_var_pattern = '[a-z][a-z0-9_]+'
   
   
 
@@ -1991,7 +2031,7 @@ default value:
 
 .. code::
 
-  '[0-9A-Z_]+'
+  '[A-Z][0-9A-Z_]+'
 
 command-line option:
 --------------------
@@ -2015,7 +2055,7 @@ config-file entry:
   
     # regular expression pattern describing valid names for keywords used in
     # functions or macros
-    keyword_pattern = '[0-9A-Z_]+'
+    keyword_pattern = '[A-Z][0-9A-Z_]+'
   
   
 

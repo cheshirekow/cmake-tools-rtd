@@ -209,28 +209,32 @@ with section("lint"):
   macro_pattern = '[0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with global
-  # scope
-  global_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+  # (cache) scope
+  global_var_pattern = '[A-Z][0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with global
   # scope (but internal semantic)
-  internal_var_pattern = '_[0-9A-Z][0-9A-Z_]+'
+  internal_var_pattern = '_[A-Z][0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with local
   # scope
-  local_var_pattern = '[0-9a-z_]+'
+  local_var_pattern = '[a-z][a-z0-9_]+'
 
   # regular expression pattern describing valid names for privatedirectory
   # variables
   private_var_pattern = '_[0-9a-z_]+'
 
-  # regular expression pattern describing valid names for publicdirectory
+  # regular expression pattern describing valid names for public directory
   # variables
-  public_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+  public_var_pattern = '[A-Z][0-9A-Z_]+'
+
+  # regular expression pattern describing valid names for function/macro
+  # arguments and loop variables.
+  argument_var_pattern = '[a-z][a-z0-9_]+'
 
   # regular expression pattern describing valid names for keywords used in
   # functions or macros
-  keyword_pattern = '[0-9A-Z_]+'
+  keyword_pattern = '[A-Z][0-9A-Z_]+'
 
   # In the heuristic for C0201, how many conditionals to match within a loop in
   # before considering the loop a parser.
