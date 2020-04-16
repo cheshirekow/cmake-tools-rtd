@@ -4,13 +4,63 @@
 with section("parse"):
 
   # Specify structure for custom cmake functions
-  additional_commands = { 'format_and_lint': { 'kwargs': { 'CC': '*',
-                                     'CCDEPENDS': '*',
+  additional_commands = { 'cc_binary': { 'kwargs': { 'DEPS': '*',
+                               'PKGDEPS': '*',
+                               'PROPERTIES': { 'kwargs': { 'EXPORT_NAME': 1,
+                                                           'OUTPUT_NAME': 1}},
+                               'SRCS': '*'},
+                   'pargs': '1+'},
+    'cc_library': { 'flags': ['STATIC', 'SHARED'],
+                    'kwargs': { 'DEPS': '*',
+                                'PKGDEPS': '*',
+                                'PROPERTIES': { 'kwargs': { 'EXPORT_NAME': 1,
+                                                            'INTERFACE_INCLUDE_DIRECTORIES': 1,
+                                                            'LIBRARY_OUTPUT_NAME': 1,
+                                                            'SOVERSION': 1,
+                                                            'VERSION': 1}},
+                                'SRCS': '*'},
+                    'pargs': '1+'},
+    'cc_test': { 'kwargs': { 'ARGV': '*',
+                             'DEPS': '*',
+                             'LABELS': '*',
+                             'PKGDEPS': '*',
+                             'SRCS': '*',
+                             'TEST_DEPS': '*',
+                             'WORKING_DIRECTORY': '*'},
+                 'pargs': 1},
+    'check_call': { 'flags': [ 'OUTPUT_QUIET',
+                               'ERROR_QUIET',
+                               'OUTPUT_STRIP_TRAILING_WHITESPACE',
+                               'ERROR_STRIP_TRAILING_WHITESPACE'],
+                    'kwargs': { 'COMMAND': '*',
+                                'ENCODING': '1',
+                                'ERROR_FILE': '1',
+                                'ERROR_VARIABLE': '1',
+                                'INPUT_FILE': '1',
+                                'OUTPUT_FILE': '1',
+                                'OUTPUT_VARIABLE': '1',
+                                'RESULTS_VARIABLE': '1',
+                                'RESULT_VARIABLE': '1',
+                                'TIMEOUT': '1',
+                                'WORKING_DIRECTORY': '1'}},
+    'create_debian_binary_packages': { 'kwargs': {'DEPS': '*', 'OUTPUTS': '*'},
+                                       'pargs': [3, '+']},
+    'create_debian_packages': { 'kwargs': {'DEPS': '*', 'OUTPUTS': '*'},
+                                'pargs': [ { 'flags': ['FORCE_PBUILDER'],
+                                             'nargs': '+'}]},
+    'exportvars': {'kwargs': {'VARS': '+'}, 'pargs': '1+'},
+    'format_and_lint': { 'kwargs': { 'CC': '*',
                                      'CMAKE': '*',
-                                     'EXCLUDE': '*',
                                      'JS': '*',
-                                     'PY': '*'}},
-    'pkg_find': {'kwargs': {'PKG': '*'}}}
+                                     'PY': '*',
+                                     'SHELL': '*'}},
+    'get_debs': {'pargs': [3, '*']},
+    'importvars': {'kwargs': {'VARS': '+'}, 'pargs': '1+'},
+    'pkg_find': {'kwargs': {'PKG': '*'}},
+    'stage_files': { 'kwargs': { 'FILES': '*',
+                                 'LIST': 1,
+                                 'SOURCEDIR': 1,
+                                 'STAGE': 1}}}
 
   # Specify variable tags.
   vartags = []
@@ -159,28 +209,32 @@ with section("lint"):
   macro_pattern = '[0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with global
-  # scope
-  global_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+  # (cache) scope
+  global_var_pattern = '[A-Z][0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with global
   # scope (but internal semantic)
-  internal_var_pattern = '_[0-9A-Z][0-9A-Z_]+'
+  internal_var_pattern = '_[A-Z][0-9A-Z_]+'
 
   # regular expression pattern describing valid names for variables with local
   # scope
-  local_var_pattern = '[0-9a-z_]+'
+  local_var_pattern = '[a-z][a-z0-9_]+'
 
   # regular expression pattern describing valid names for privatedirectory
   # variables
   private_var_pattern = '_[0-9a-z_]+'
 
-  # regular expression pattern describing valid names for publicdirectory
+  # regular expression pattern describing valid names for public directory
   # variables
-  public_var_pattern = '[0-9A-Z][0-9A-Z_]+'
+  public_var_pattern = '[A-Z][0-9A-Z_]+'
+
+  # regular expression pattern describing valid names for function/macro
+  # arguments and loop variables.
+  argument_var_pattern = '[a-z][a-z0-9_]+'
 
   # regular expression pattern describing valid names for keywords used in
   # functions or macros
-  keyword_pattern = '[0-9A-Z_]+'
+  keyword_pattern = '[A-Z][0-9A-Z_]+'
 
   # In the heuristic for C0201, how many conditionals to match within a loop in
   # before considering the loop a parser.
@@ -190,7 +244,7 @@ with section("lint"):
   min_statement_spacing = 1
 
   # Require no more than this many newlines between statements
-  max_statement_spacing = 1
+  max_statement_spacing = 2
   max_returns = 6
   max_branches = 12
   max_arguments = 5

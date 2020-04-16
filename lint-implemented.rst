@@ -47,7 +47,7 @@ message
 
 .. code:: 
 
-    Invalid {:s} name "{:s}"
+    Invalid {:s} name "{:s}" doesn't match `{:s}`
 
 
 description
@@ -700,5 +700,19 @@ and you probably aren't assigning to the correct variable.
 
 This warning may be emitted for assignment (e.g. `set()` or `list()`) as
 well as for variable expansion in an argument (e.g. `"${CMAKE_Cxx_STANDARD}"`).
+
+
+.. _W0106:
+
+-----
+W0106
+-----
+
+message
+-------
+
+.. code:: 
+
+    String looks like a variable reference missing an {:s} tag '{:s}'
 
 

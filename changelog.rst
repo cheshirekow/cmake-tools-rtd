@@ -6,6 +6,60 @@ Changelog
 v0.6 series
 -----------
 
+v0.6.10
+-------
+
+* Fix some bugs in genparsers
+* Fix some typos in environment handling in extension
+* Fix cmake-lint can't --dump-config
+* Fix default max statement spacing was 1 instead of 2
+* Cleanup legacy command specifications
+* Autogenerate command specifications for standard modules
+* Don't mark lint for add_custom_target() missing COMMAND
+* Add missing annotate resources to distribution package
+* Don't break long words when reflowing comment text
+* Print violated regex for C0103 lint
+* Make line number consistently start from "1" between tokenzizer and checker
+* Fix Scope.PARENT is same enum value as scope.INTERNAL
+* Skip travis deploy stage on pull request
+
+* Move commands.py into parse_funs/standard_funs.py
+* replace duplicates of parse_db update from standard_funs
+* get rid of root makefile
+* document the release process
+* refactor basic_checker module into a class where common function parameters
+  are now member state.
+* analyze and document variable naming conventions
+* add a pattern for function/macro argument names
+* implement W0106 looks like a variable reference missing a brace
+* fix name checks shouldn't be applied to variable references
+
+* Closes: `#170`_: Comment is wrong
+* Closes: `#171`_: Crash when running `cmake-lint --dump-config`
+* Closes: `#172`_: Possibly false positives for too many newlines
+* Closes: `#173`_: find_package_handle_standard_args()
+* Closes: `#176`_: cmake-lint: [C0113] is issued for COMMAND in add_custom_target()
+* Closes: `#181`_: cmake-annotate is missing css file
+* Closes: `#182`_: line break in url
+* Closes: `#183`_: cmake-lint: add exact configuration item/value to output
+* Closes: `#184`_: Trailing whitespace reported on wrong line
+* Closes: `#185`_: cmake-lint: set with PARENT_SCOPE is not INTERNAL
+* Closes: `#187`_: Fixed typos and bugs in vscode extension
+
+* Closes: 358e95c, 376422c, 5258b1b, 97f7956, d85b7c7, e03ec57, f0fcbce,
+
+.. _#170: https://github.com/cheshirekow/cmake_format/issues/170
+.. _#171: https://github.com/cheshirekow/cmake_format/issues/171
+.. _#172: https://github.com/cheshirekow/cmake_format/issues/172
+.. _#173: https://github.com/cheshirekow/cmake_format/issues/173
+.. _#176: https://github.com/cheshirekow/cmake_format/issues/176
+.. _#181: https://github.com/cheshirekow/cmake_format/issues/181
+.. _#182: https://github.com/cheshirekow/cmake_format/issues/182
+.. _#183: https://github.com/cheshirekow/cmake_format/issues/183
+.. _#184: https://github.com/cheshirekow/cmake_format/issues/184
+.. _#185: https://github.com/cheshirekow/cmake_format/issues/185
+.. _#187: https://github.com/cheshirekow/cmake_format/issues/187
+
 v0.6.9
 ------
 

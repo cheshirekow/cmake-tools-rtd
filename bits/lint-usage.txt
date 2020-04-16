@@ -18,6 +18,10 @@ optional arguments:
                         stdout and exit
   -o OUTFILE_PATH, --outfile-path OUTFILE_PATH
                         Write errors to this file. Default is stdout.
+  --no-help             When used with --dump-config, will omit helptext
+                        comments in the output
+  --no-default          When used with --dump-config, will omit any unmodified
+                        configuration value.
   -c CONFIG_FILES [CONFIG_FILES ...], --config-files CONFIG_FILES [CONFIG_FILES ...]
                         path to configuration file(s)
 
@@ -138,7 +142,7 @@ Options affecting the linter:
                         names
   --global-var-pattern GLOBAL_VAR_PATTERN
                         regular expression pattern describing valid names for
-                        variables with global scope
+                        variables with global (cache) scope
   --internal-var-pattern INTERNAL_VAR_PATTERN
                         regular expression pattern describing valid names for
                         variables with global scope (but internal semantic)
@@ -150,7 +154,10 @@ Options affecting the linter:
                         privatedirectory variables
   --public-var-pattern PUBLIC_VAR_PATTERN
                         regular expression pattern describing valid names for
-                        publicdirectory variables
+                        public directory variables
+  --argument-var-pattern ARGUMENT_VAR_PATTERN
+                        regular expression pattern describing valid names for
+                        function/macro arguments and loop variables.
   --keyword-pattern KEYWORD_PATTERN
                         regular expression pattern describing valid names for
                         keywords used in functions or macros
