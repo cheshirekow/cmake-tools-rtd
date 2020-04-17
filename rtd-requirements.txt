@@ -1,2 +1,2 @@
-https://github.com/cheshirekow/cmake_format/releases/download/pseudo-staging/cmake_format-0.6.10.dev1-py3-none-any.whl
+https://github.com/cheshirekow/cmake_format/releases/download/pseudo-staging/cmake_format-0.6.10.dev2-py3-none-any.whl
 PyYAML==5.3
