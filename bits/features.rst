@@ -192,4 +192,4 @@ custom command would look something like this:
        BAR BAZ)
 
 
-.. __: https://cmake-format.rtfd.io/custom_parsers
+.. __: https://cmake-format.rtfd.io/en/latest/custom_parsers.html
