@@ -48,6 +48,7 @@ with section("parse"):
     'create_debian_packages': { 'kwargs': {'DEPS': '*', 'OUTPUTS': '*'},
                                 'pargs': [ { 'flags': ['FORCE_PBUILDER'],
                                              'nargs': '+'}]},
+    'debhelp': {'pargs': ['1+'], 'spelling': 'DEBHELP'},
     'exportvars': { 'kwargs': {'VARS': '+'},
                     'pargs': '1+',
                     'spelling': 'EXPORTVARS'},
