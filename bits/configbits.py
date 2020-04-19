@@ -48,14 +48,19 @@ with section("parse"):
     'create_debian_packages': { 'kwargs': {'DEPS': '*', 'OUTPUTS': '*'},
                                 'pargs': [ { 'flags': ['FORCE_PBUILDER'],
                                              'nargs': '+'}]},
-    'exportvars': {'kwargs': {'VARS': '+'}, 'pargs': '1+'},
+    'debhelp': {'pargs': ['1+'], 'spelling': 'DEBHELP'},
+    'exportvars': { 'kwargs': {'VARS': '+'},
+                    'pargs': '1+',
+                    'spelling': 'EXPORTVARS'},
     'format_and_lint': { 'kwargs': { 'CC': '*',
                                      'CMAKE': '*',
                                      'JS': '*',
                                      'PY': '*',
                                      'SHELL': '*'}},
     'get_debs': {'pargs': [3, '*']},
-    'importvars': {'kwargs': {'VARS': '+'}, 'pargs': '1+'},
+    'importvars': { 'kwargs': {'VARS': '+'},
+                    'pargs': '1+',
+                    'spelling': 'IMPORTVARS'},
     'pkg_find': {'kwargs': {'PKG': '*'}},
     'stage_files': { 'kwargs': { 'FILES': '*',
                                  'LIST': 1,
@@ -200,7 +205,7 @@ with section("markup"):
 with section("lint"):
 
   # a list of lint codes to disable
-  disabled_codes = []
+  disabled_codes = ['C0113']
 
   # regular expression pattern describing valid function names
   function_pattern = '[0-9a-z_]+'
