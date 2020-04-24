@@ -6,6 +6,17 @@ Changelog
 v0.6 series
 -----------
 
+v0.6.11
+-------
+
+* Fix tag handling in release pipeline
+* Fix positional specification removed from global configuration on first
+  parse of legacy commands
+
+* Closes: `#191`_: Inconsistent formatting for ...
+
+.. _#191: https://github.com/cheshirekow/cmake_format/issues/191
+
 v0.6.10
 -------
 
