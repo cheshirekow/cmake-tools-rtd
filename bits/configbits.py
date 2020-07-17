@@ -4,19 +4,34 @@
 with section("parse"):
 
   # Specify structure for custom cmake functions
-  additional_commands = { 'cc_binary': { 'kwargs': { 'DEPS': '*',
+  additional_commands = { 'cc_binary': { 'flags': ['ADD_RUNTARGET'],
+                   'kwargs': { 'DEPS': '*',
                                'PKGDEPS': '*',
                                'PROPERTIES': { 'kwargs': { 'EXPORT_NAME': 1,
                                                            'OUTPUT_NAME': 1}},
                                'SRCS': '*'},
                    'pargs': '1+'},
     'cc_library': { 'flags': ['STATIC', 'SHARED'],
-                    'kwargs': { 'DEPS': '*',
+                    'kwargs': { 'DEPS': { 'kwargs': { 'INTERFACE': '*',
+                                                      'PRIVATE': '*',
+                                                      'PUBLIC': '*'},
+                                          'pargs': '*'},
+                                'INC': { 'kwargs': { 'INTERFACE': '*',
+                                                     'PRIVATE': '*',
+                                                     'PUBLIC': '*'},
+                                         'pargs': 0},
+                                'LIBDIRS': { 'kwargs': { 'INTERFACE': '*',
+                                                         'PRIVATE': '*',
+                                                         'PUBLIC': '*'},
+                                             'pargs': '*'},
                                 'PKGDEPS': '*',
-                                'PROPERTIES': { 'kwargs': { 'EXPORT_NAME': 1,
+                                'PROPERTIES': { 'kwargs': { 'ARCHIVE_OUTPUT_NAME': 1,
+                                                            'EXPORT_NAME': 1,
                                                             'INTERFACE_INCLUDE_DIRECTORIES': 1,
                                                             'LIBRARY_OUTPUT_NAME': 1,
+                                                            'OUTPUT_NAME': 1,
                                                             'SOVERSION': 1,
+                                                            'SUFFIX': 1,
                                                             'VERSION': 1}},
                                 'SRCS': '*'},
                     'pargs': '1+'},
@@ -58,14 +73,26 @@ with section("parse"):
                                      'PY': '*',
                                      'SHELL': '*'}},
     'get_debs': {'pargs': [3, '*']},
+    'gtk_doc_add_module': { 'kwargs': { 'FIXREFOPTS': '*',
+                                        'IGNOREHEADERS': '*',
+                                        'LIBRARIES': '*',
+                                        'LIBRARY_DIRS': '*',
+                                        'SOURCE': '*',
+                                        'SUFFIXES': '*',
+                                        'XML': 1},
+                            'pargs': 1},
     'importvars': { 'kwargs': {'VARS': '+'},
                     'pargs': '1+',
                     'spelling': 'IMPORTVARS'},
+    'join': {'kwargs': {'GLUE': 1}, 'pargs': [1, '+']},
     'pkg_find': {'kwargs': {'PKG': '*'}},
     'stage_files': { 'kwargs': { 'FILES': '*',
                                  'LIST': 1,
                                  'SOURCEDIR': 1,
                                  'STAGE': 1}}}
+
+  # Override configurations per-command where available
+  override_spec = {}
 
   # Specify variable tags.
   vartags = []
@@ -77,6 +104,9 @@ with section("parse"):
 # Options affecting formatting.
 # -----------------------------
 with section("format"):
+
+  # Disable formatting entirely, making cmake-format a no-op
+  disable = False
 
   # How wide to allow formatted cmake files
   line_width = 80

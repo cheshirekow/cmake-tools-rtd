@@ -45,6 +45,35 @@ config-file entry:
   
   
 
+.. _override_spec:
+
+override_spec
+=============
+
+Override configurations per-command where available
+
+default value:
+--------------
+
+.. code::
+
+  {}
+
+config-file entry:
+------------------
+
+.. code:: 
+
+  # ----------------------------------
+  # Options affecting listfile parsing
+  # ----------------------------------
+  with section("parse"):
+  
+    # Override configurations per-command where available
+    override_spec = {}
+  
+  
+
 .. _vartags:
 
 vartags
@@ -164,6 +193,44 @@ config-file entry:
 -----------------------------
 Options affecting formatting.
 -----------------------------
+
+.. _disable:
+
+disable
+=======
+
+Disable formatting entirely, making cmake-format a no-op
+
+default value:
+--------------
+
+.. code::
+
+  False
+
+command-line option:
+--------------------
+
+.. code:: 
+
+     --disable [DISABLE]  Disable formatting entirely, making cmake-format a no-
+                          op
+   
+
+config-file entry:
+------------------
+
+.. code:: 
+
+  # -----------------------------
+  # Options affecting formatting.
+  # -----------------------------
+  with section("format"):
+  
+    # Disable formatting entirely, making cmake-format a no-op
+    disable = False
+  
+  
 
 .. _line_width:
 
