@@ -93,3 +93,13 @@ formatter, ``cmake-format``, to your hooks with the following addition to your
        rev: v0.6.11
        hooks:
        - id: cmake-format
+
+Docker Images
+=============
+
+There is an official docker image at dockerhub__. You can pull the latest with,
+e.g.::
+
+  docker pull cheshirekow/cmake-format
+
+.. __: https://hub.docker.com/repository/docker/cheshirekow/cmake-format
