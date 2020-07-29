@@ -5,6 +5,8 @@ Options affecting listfile parsing:
                         Specify property tags.
 
 Options affecting formatting.:
+  --disable [DISABLE]   Disable formatting entirely, making cmake-format a no-
+                        op
   --line-width LINE_WIDTH
                         How wide to allow formatted cmake files
   --tab-size TAB_SIZE   How many spaces to tab for indent
