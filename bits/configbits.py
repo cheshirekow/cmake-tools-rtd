@@ -114,6 +114,19 @@ with section("format"):
   # How many spaces to tab for indent
   tab_size = 2
 
+  # If true, lines are indented using tab characters (utf-8 0x09) instead of
+  # <tab_size> space characters (utf-8 0x20). In cases where the layout would
+  # require a fractional tab character, the behavior of the  fractional
+  # indentation is governed by <fractional_tab_policy>
+  use_tabchars = False
+
+  # If <use_tabchars> is True, then the value of this variable indicates how
+  # fractional indentions are handled during whitespace replacement. If set to
+  # 'use-space', fractional indentation is left as spaces (utf-8 0x20). If set
+  # to `round-up` fractional indentation is replaced with a single tab character
+  # (utf-8 0x09) effectively shifting the column to the next tabstop
+  fractional_tab_policy = 'use-space'
+
   # If an argument group contains more than this many sub-groups (parg or kwarg
   # groups) then force it to a vertical layout.
   max_subgroups_hwrap = 2

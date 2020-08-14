@@ -1,7 +1,7 @@
 # The following multiple newlines should be collapsed into a single newline
 
 cmake_minimum_required(VERSION 2.8.11)
-project(cmake_format_test)
+project(cmakelang_test)
 
 # This multiline-comment should be reflowed into a single comment on one line
 

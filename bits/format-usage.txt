@@ -51,6 +51,22 @@ Options affecting formatting.:
   --line-width LINE_WIDTH
                         How wide to allow formatted cmake files
   --tab-size TAB_SIZE   How many spaces to tab for indent
+  --use-tabchars [USE_TABCHARS]
+                        If true, lines are indented using tab characters
+                        (utf-8 0x09) instead of <tab_size> space characters
+                        (utf-8 0x20). In cases where the layout would require
+                        a fractional tab character, the behavior of the
+                        fractional indentation is governed by
+                        <fractional_tab_policy>
+  --fractional-tab-policy {use-space,round-up}
+                        If <use_tabchars> is True, then the value of this
+                        variable indicates how fractional indentions are
+                        handled during whitespace replacement. If set to 'use-
+                        space', fractional indentation is left as spaces
+                        (utf-8 0x20). If set to `round-up` fractional
+                        indentation is replaced with a single tab character
+                        (utf-8 0x09) effectively shifting the column to the
+                        next tabstop
   --max-subgroups-hwrap MAX_SUBGROUPS_HWRAP
                         If an argument group contains more than this many sub-
                         groups (parg or kwarg groups) then force it to a

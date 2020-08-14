@@ -320,6 +320,37 @@ message
     {:s} newlines between statements
 
 
+.. _C0306:
+
+-----
+C0306
+-----
+
+message
+-------
+
+.. code:: 
+
+    Tab-policy violation. Found {:s} but should be {:s}
+
+
+.. _C0307:
+
+-----
+C0307
+-----
+
+message
+-------
+
+.. code:: 
+
+    Bad indentation:
+    {:s}{:s}
+    {:s}^----
+
+
+
 .. _C0321:
 
 -----
