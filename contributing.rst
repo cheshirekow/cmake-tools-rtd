@@ -8,8 +8,8 @@ General Rules
 
 1. Please use ``pylint`` and ``flake8`` to check your code for lint. There are
    config files in the repo.
-2. There is a python ``unittest`` suite in ``cmake_formattests.py``. Run with
-   ``python -Bm cmake_format.tests`` (ensure modified code is on the python
+2. There is a python ``unittest`` suite in ``cmakelangtests.py``. Run with
+   ``python -Bm cmakelang.tests`` (ensure modified code is on the python
    path). Alternatively you can use ``cmake`` (``make test``, ``ninja test``,
    etc) or bazel (``bazel test ...``).
 3. There's an ``autopep8`` config file in the repo as well. Feel free to use
@@ -188,13 +188,13 @@ Copyright Assignment
 
 To sign the copyright assignment agreement the quick way, run::
 
-   python -Bm cmake_format.contrib.sign_ca
+   python -Bm cmakelang.contrib.sign_ca
 
 from the root of the repository.
 
 For the long way, please follow this process:
 
-1. Copy the file ``cmake_format/contrib/individual_ca.txt`` to some working
+1. Copy the file ``cmakelang/contrib/individual_ca.txt`` to some working
    directory as, e.g., ``cmake-format-ca.txt.in``.
 
 2. Replace the template strings at the bottom with your actual name and
@@ -208,7 +208,7 @@ For the long way, please follow this process:
    commits.
 
 4. Copy the asci-armored signature packet at the bottom of the signed document
-   and paste it into ``cmake_format/contrib/signature_db.json``. Include this
+   and paste it into ``cmakelang/contrib/signature_db.json``. Include this
    change in your first pull request.
 
 -------------------------

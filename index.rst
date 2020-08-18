@@ -1,6 +1,6 @@
-===================
-cmake quality tools
-===================
+====================
+cmake language tools
+====================
 
 .. image:: https://travis-ci.com/cheshirekow/cmake_format.svg?branch=master
     :target: https://travis-ci.com/cheshirekow/cmake_format
@@ -8,8 +8,8 @@ cmake quality tools
 .. image:: https://readthedocs.org/projects/cmake-format/badge/?version=latest
     :target: https://cmake_format.readthedocs.io
 
-The ``cmake-format`` project provides Quality Assurance (QA) tools
-for ``cmake``:
+The ``cmakelang`` project provides Quality Assurance (QA) and other language
+tools for ``cmake``:
 
 
 * ``cmake-annotate`` can generate pretty HTML from your listfiles

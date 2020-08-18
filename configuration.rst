@@ -16,7 +16,7 @@ The tools accept configuration files in yaml, json, or python format.
   tools require the ``pyyaml`` python package to be installed. This
   dependency is not enforced by default during installation since this
   is an optional feature. It can be enabled by installing with a
-  command like ``pip install cmake_format[YAML]``. Or you can install
+  command like ``pip install cmakelang[YAML]``. Or you can install
   ``pyyaml`` manually.
 
 

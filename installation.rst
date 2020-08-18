@@ -2,29 +2,36 @@
 Installation
 ============
 
-All of the tools are included as part of the ``cmake-format`` python
+All of the tools are included as part of the ``cmakelang`` python
 distribution package.
+
+.. note:: Until verion 0.6.12 the software was distributed under the
+   ``cmake-format`` python package. As the project grew to include
+   multiple tools beyond the formatter, the name was changed to something
+   more appropriate. The ``cmake-format`` package will be maintained
+   for the forseable future as an empty package depending on ``cmakelang``
+   to ease users transition.
 
 Install with pip
 ================
 
-The easiest way to install ``cmake-format`` is from `pypi.org`_
+The easiest way to install ``cmakelang`` is from `pypi.org`_
 using `pip`_. For example::
 
-    pip install cmake_format
+    pip install cmakelang
 
 If you're on a linux-type system (such as ubuntu) the above command might not
 work if it would install into a system-wide location. If that's what you
 really want you might need to use :code:`sudo`, e.g.::
 
-    sudo pip install cmake_format
+    sudo pip install cmakelang
 
 In general though I wouldn't really recommend doing that though since things
 can get pretty messy between your system python distributions and your
 :code:`pip` managed directories. Alternatively you can install it for your user
 with::
 
-    pip install --user cmake_format
+    pip install --user cmakelang
 
 which I would probably recommend for most users.
 
@@ -33,9 +40,16 @@ which I would probably recommend for most users.
    If you wish to use a configuration file in YAML format you'll want to
    install with the optional ``YAML`` feature, e.g.::
 
-       pip install cmake_format[YAML]
+       pip install cmakelang[YAML]
 
-.. _`pypi.org`: https://pypi.org/project/cmake-format/
+   or manually install ``pyyaml``. Likewise, if you'd like to use the HTML
+   annotator you may install with the optional ``html-gen`` feature, e.g.::
+
+       pip install cmakelang[html-gen]
+
+   or you may install ``jinja2`` manually.
+
+.. _`pypi.org`: https://pypi.org/project/cmakelang/
 .. _pip: https://pip.pypa.io/en/stable/
 
 Install from source
@@ -44,7 +58,7 @@ Install from source
 You can also install from source with pip. You can download a release package
 from github__ or pypi__ and then install it directly with pip. For example::
 
-  pip install v0.6.11.tar.gz
+  pip install v0.6.12.tar.gz
 
 .. __: https://github.com/cheshirekow/cmake_format/releases
 .. __: https://pypi.org/project/cmake-format/#files
@@ -90,7 +104,7 @@ formatter, ``cmake-format``, to your hooks with the following addition to your
 
    repos:
      - repo: https://github.com/cheshirekow/cmake-format-precommit
-       rev: v0.6.11
+       rev: v0.6.12
        hooks:
        - id: cmake-format
 

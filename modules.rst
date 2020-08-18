@@ -4,7 +4,7 @@ cmake\_format package
 Module contents
 ---------------
 
-.. automodule:: cmake_format
+.. automodule:: cmakelang
     :members:
     :undoc-members:
     :show-inheritance:
@@ -15,7 +15,7 @@ Submodules
 cmake\_format\.configuration module
 -----------------------------------
 
-.. automodule:: cmake_format.configuration
+.. automodule:: cmakelang.configuration
     :members:
     :undoc-members:
     :show-inheritance:
@@ -23,15 +23,7 @@ cmake\_format\.configuration module
 cmake\_format\.common module
 ----------------------------
 
-.. automodule:: cmake_format.common
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-cmake\_format\.formatter module
--------------------------------
-
-.. automodule:: cmake_format.formatter
+.. automodule:: cmakelang.common
     :members:
     :undoc-members:
     :show-inheritance:
@@ -39,7 +31,7 @@ cmake\_format\.formatter module
 cmake\_format\.lexer module
 ---------------------------
 
-.. automodule:: cmake_format.lexer
+.. automodule:: cmakelang.lexer
     :members:
     :undoc-members:
     :show-inheritance:
@@ -47,31 +39,25 @@ cmake\_format\.lexer module
 cmake\_format\.markup module
 ----------------------------
 
-.. automodule:: cmake_format.markup
+.. automodule:: cmakelang.markup
     :members:
     :undoc-members:
     :show-inheritance:
 
-cmake\_format\.parse_funs module
---------------------------------
-
-.. automodule:: cmake_format.parse_funs
-    :members:
-    :undoc-members:
-    :show-inheritance:
 
 cmake\_format\.parse module
 ----------------------------
 
-.. automodule:: cmake_format.parse
+.. automodule:: cmakelang.parse
     :members:
     :undoc-members:
     :show-inheritance:
 
-cmake\_format\.render module
-----------------------------
 
-.. automodule:: cmake_format.render
+cmake\_format\.parse\.funs module
+---------------------------------
+
+.. automodule:: cmakelang.parse.funs
     :members:
     :undoc-members:
     :show-inheritance:
