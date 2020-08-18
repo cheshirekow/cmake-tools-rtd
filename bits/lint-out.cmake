@@ -13,11 +13,11 @@ cmakelang/lint/test/expect_lint.cmake:24,10: [C0103] Invalid argument name "LOOP
 cmakelang/lint/test/expect_lint.cmake:30,00: [C0306] Tab-policy violation. Found tab but should be space
 cmakelang/lint/test/expect_lint.cmake:34,01: [C0307] Bad indentation:
  message
-  ^----
+  ^----BodyNode: 1:0->IfBlockNode: 33:0->BodyNode: 33:8->StatementNode: 34:1->FunctionNameNode: 34:1
 
 cmakelang/lint/test/expect_lint.cmake:38,03: [C0307] Bad indentation:
    message
-  ^----
+  ^----BodyNode: 1:0->IfBlockNode: 37:0->BodyNode: 37:8->StatementNode: 38:3->FunctionNameNode: 38:3
 
 cmakelang/lint/test/expect_lint.cmake:43,04: [C0103] Invalid CACHE variable name "gtest_force_shared_crt" doesn't match `[A-Z][0-9A-Z_]+`
 cmakelang/lint/test/expect_lint.cmake:46,27: [E1120] Missing required positional argument

@@ -347,7 +347,7 @@ message
 
     Bad indentation:
     {:s}{:s}
-    {:s}^----
+    {:s}^----{}
 
 
 
