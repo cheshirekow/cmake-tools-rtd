@@ -46,9 +46,9 @@ Cut a Release
 12. Push the vscode package with::
 
       vsce publish --baseImagesUrl \
-      https://raw.githubusercontent.com/cheshirekow/cmake_format/master/cmake_format/vscode_extension
+      https://raw.githubusercontent.com/cheshirekow/cmakelang/master/cmakelang/vscode_extension
 
-.. __: https://github.com/cheshirekow/cmake_format/releases/tag/pseudo-staging
+.. __: https://github.com/cheshirekow/cmakelang/releases/tag/pseudo-staging
 .. __: https://github.com/cheshirekow/cmake-tools-rtd
 .. __: https://readthedocs.org/projects/cmake-format/builds/
 .. __: https://cmake-format.readthedocs.io/en/staging/

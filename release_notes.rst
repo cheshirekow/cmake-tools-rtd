@@ -11,6 +11,27 @@ v0.6 series
 ===========
 
 -------
+v0.6.12
+-------
+
+This release includes mostly internal housekeeping. The code organization was
+overhauled to better represent the division between different components.
+The `cmake_format` package has been replaced by `cmakelang`, with
+`format` now a subpackage. All the first class tools are now subpackages
+of `cmakelang`. For now, I'll leave the github repository at `cmake_format`
+but there's a good chance I'll move it to `cmakelang` in the future. Big
+refactors like this have a tendency to expose gaps in coverage so please
+report any breakages you observe.
+
+In addition, the configuration now includes options for using tab characters
+in listfiles (though, I'm not sure who in the right mind would choose to do
+so). If enabled, the formatter will translate indentations from spaces to tabs,
+and the linter will inforce a consistent tab policy.
+
+This release also includes a couple of minor bug fixes. See the release notes
+for more details.
+
+-------
 v0.6.11
 -------
 

@@ -24,12 +24,37 @@ if(FOOBAR)
   foreach(LOOPVAR3 a b c d)
     # pass
   endforeach()
-
 endif()
+
+if(TRUE)
+	message("Hello world")
+endif()
+
+if(TRUE)
+ message("Hello world")
+endif()
+
+if(TRUE)
+   message("Hello world")
+endif()
+
+
+# expect:
+set(gtest_force_shared_crt ON # cmake-lint: disable=C0103
+    CACHE BOOL "See googletest/googletest/CMakeLists.txt")
 
 set(VARNAME varvalue CACHE STRING)
 
 cmake_minimum_required_version(VERSION 2.8.11 VERSION 3.16)
+
+# expect:
+install(
+  DIRECTORY foo bar/
+  DESTINATION some/path
+  PATTERN "CVS" EXCLUDE
+  PATTERN "scripts/*" PERMISSIONS OWNER_EXECUTE OWNER_WRITE OWNER_READ
+                                  GROUP_EXECUTE GROUP_READ)
+
 
 add_custom_command()
 

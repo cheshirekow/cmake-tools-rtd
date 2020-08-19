@@ -17,7 +17,7 @@ Tokenizer
 ---------
 
 Listfiles are first digested into a sequence of tokens. The tokenizer is
-implemented in `lexer.py` an defines the following types of tokens:
+implemented in `lex.py` an defines the following types of tokens:
 
 +------------------+--------------------------------------+-------------------+
 | Token Type       | Description                          | Example           |

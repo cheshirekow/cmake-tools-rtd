@@ -342,6 +342,101 @@ config-file entry:
   
   
 
+.. _use_tabchars:
+
+use_tabchars
+============
+
+If true, lines are indented using tab characters (utf-8 0x09) instead of <tab_size> space characters (utf-8 0x20). In cases where the layout would require a fractional tab character, the behavior of the  fractional indentation is governed by <fractional_tab_policy>
+
+default value:
+--------------
+
+.. code::
+
+  False
+
+command-line option:
+--------------------
+
+.. code:: 
+
+     --use-tabchars [USE_TABCHARS]
+                           If true, lines are indented using tab characters
+                           (utf-8 0x09) instead of <tab_size> space characters
+                           (utf-8 0x20). In cases where the layout would require
+                           a fractional tab character, the behavior of the
+                           fractional indentation is governed by
+                           <fractional_tab_policy>
+   
+
+config-file entry:
+------------------
+
+.. code:: 
+
+  # -----------------------------
+  # Options affecting formatting.
+  # -----------------------------
+  with section("format"):
+  
+    # If true, lines are indented using tab characters (utf-8 0x09) instead of
+    # <tab_size> space characters (utf-8 0x20). In cases where the layout would
+    # require a fractional tab character, the behavior of the  fractional
+    # indentation is governed by <fractional_tab_policy>
+    use_tabchars = False
+  
+  
+
+.. _fractional_tab_policy:
+
+fractional_tab_policy
+=====================
+
+If <use_tabchars> is True, then the value of this variable indicates how fractional indentions are handled during whitespace replacement. If set to 'use-space', fractional indentation is left as spaces (utf-8 0x20). If set to `round-up` fractional indentation is replaced with a single tab character (utf-8 0x09) effectively shifting the column to the next tabstop
+
+default value:
+--------------
+
+.. code::
+
+  'use-space'
+
+command-line option:
+--------------------
+
+.. code:: 
+
+     --fractional-tab-policy {use-space,round-up}
+                           If <use_tabchars> is True, then the value of this
+                           variable indicates how fractional indentions are
+                           handled during whitespace replacement. If set to 'use-
+                           space', fractional indentation is left as spaces
+                           (utf-8 0x20). If set to `round-up` fractional
+                           indentation is replaced with a single tab character
+                           (utf-8 0x09) effectively shifting the column to the
+                           next tabstop
+   
+
+config-file entry:
+------------------
+
+.. code:: 
+
+  # -----------------------------
+  # Options affecting formatting.
+  # -----------------------------
+  with section("format"):
+  
+    # If <use_tabchars> is True, then the value of this variable indicates how
+    # fractional indentions are handled during whitespace replacement. If set to
+    # 'use-space', fractional indentation is left as spaces (utf-8 0x20). If set
+    # to `round-up` fractional indentation is replaced with a single tab character
+    # (utf-8 0x09) effectively shifting the column to the next tabstop
+    fractional_tab_policy = 'use-space'
+  
+  
+
 .. _max_subgroups_hwrap:
 
 max_subgroups_hwrap

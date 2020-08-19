@@ -8,6 +8,32 @@ Changelog
 v0.6 series
 -----------
 
+v0.6.12
+-------
+
+* Fix `--check` missing early return.
+* Fix wrong base class for TupleParser
+* Add `PATTERN` as allowed duplicate keyword
+* Enable `cmake-lint: disable=` within a statement
+* Add cmake lint checks on tab policy and indentation size
+
+* Closes: `#31`_: Allow use of tabs instead of spaces
+* Closes: `#197`_: [C0103] Invalid CACHE variable
+* Closes: `#205`_: Multiple config files aren't merged...
+* Closes: `#208`_: Duplicate PATTERN in install(...
+* Closes: `#210`_: Usage: banning tabs and enforcing the spaces per tab
+* Closes: `#216`_: --check mode dumps entire file since 0.6.11
+* Closes: `#217`_: strange formatting for set_target_properties
+
+.. _#31: https://github.com/cheshirekow/cmake_format/issues/31
+.. _#197: https://github.com/cheshirekow/cmake_format/issues/197
+.. _#205: https://github.com/cheshirekow/cmake_format/issues/205
+.. _#208: https://github.com/cheshirekow/cmake_format/issues/208
+.. _#210: https://github.com/cheshirekow/cmake_format/issues/210
+.. _#216: https://github.com/cheshirekow/cmake_format/issues/216
+.. _#217: https://github.com/cheshirekow/cmake_format/issues/217
+
+
 v0.6.11
 -------
 
