@@ -1,2 +1,2 @@
 https://github.com/cheshirekow/cmake_format/releases/download/pseudo-master/cmakelang-0.6.13-py3-none-any.whl
-PyYAML==5.3
+PyYAML==5.4
