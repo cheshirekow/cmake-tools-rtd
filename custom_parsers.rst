@@ -9,7 +9,7 @@ Using the simple specification
 ------------------------------
 
 You can tell the parser how to interpret your custom commands by specifying the
-format of their call signature using the ``addtitional_commands`` configuration
+format of their call signature using the ``additional_commands`` configuration
 variable. The format of the variable is a dictionary (a mapping in JSON/YAML)
 where the keys should be the name of the command and the values satisfy the
 following (recursive) schema:
