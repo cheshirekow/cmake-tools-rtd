@@ -25,12 +25,12 @@ cmakelang/lint/test/expect_lint.cmake:46,33: [E1120] Missing required positional
 cmakelang/lint/test/expect_lint.cmake:48,46: [E1122] Duplicate keyword argument VERSION
 cmakelang/lint/test/expect_lint.cmake:59,00: [C0305] too many newlines between statements
 cmakelang/lint/test/expect_lint.cmake:59,19: [E1120] Missing required positional argument
-cmakelang/lint/test/expect_lint.cmake:63,02: [C0114] Form descriminator hidden behind variable dereference
-cmakelang/lint/test/expect_lint.cmake:68,02: [E1126] Invalid form descriminator
+cmakelang/lint/test/expect_lint.cmake:63,02: [C0114] Form discriminator hidden behind variable dereference
+cmakelang/lint/test/expect_lint.cmake:68,02: [E1126] Invalid form discriminator
 cmakelang/lint/test/expect_lint.cmake:72,19: [E1125] Missing required keyword argument COMMAND
 cmakelang/lint/test/expect_lint.cmake:74,05: [E1120] Missing required positional argument
-cmakelang/lint/test/expect_lint.cmake:77,05: [C0114] Form descriminator hidden behind variable dereference
-cmakelang/lint/test/expect_lint.cmake:79,05: [E1126] Invalid form descriminator
+cmakelang/lint/test/expect_lint.cmake:77,05: [C0114] Form discriminator hidden behind variable dereference
+cmakelang/lint/test/expect_lint.cmake:79,05: [E1126] Invalid form discriminator
 cmakelang/lint/test/expect_lint.cmake:81,00: [E0103] break outside of loop
 cmakelang/lint/test/expect_lint.cmake:81,00: [W0101] Unreachable code
 cmakelang/lint/test/expect_lint.cmake:83,00: [E0103] continue outside of loop
