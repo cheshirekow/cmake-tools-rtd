@@ -155,13 +155,13 @@ message
 
 .. code:: 
 
-    Form descriminator hidden behind variable dereference
+    Form discriminator hidden behind variable dereference
 
 
 description
 -----------
 
-Used when a keyword used to descriminate betwen different forms of a command is
+Used when a keyword used to discriminate betwen different forms of a command is
 hidden behind a variable dereference.
 
 This message is implemented by individual command checkers.
@@ -175,7 +175,7 @@ a particular keyword (see e.g. the `file` command). And because cmake is a
 macro languge that keyword can actually be held inside a variable. Thus the
 keyword might not actually be visible to cmake-lint (or humans). In general
 there is no reason to do this and it really hurts readability since different
-descriminator keywords yield essentially different commands.
+discriminator keywords yield essentially different commands.
 
 
 .. _C0201:
@@ -595,14 +595,14 @@ message
 
 .. code:: 
 
-    Invalid form descriminator
+    Invalid form discriminator
 
 
 description
 -----------
 
 
-Used when a keyword used to descriminate between different command forms is
+Used when a keyword used to discriminate between different command forms is
 ommitted.
 
 
