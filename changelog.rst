@@ -425,7 +425,7 @@ v0.5.2
 * move ``add_library``, ``add_executable()`` and ``install()`` parsers to their
   own modules
 * don't infer sortability in ``add_library`` or ``add_executable()`` if the
-  descriminator token might be a cmake variable hiding the descriminator
+  discriminator token might be a cmake variable hiding the discriminator
   spelling
 * Split configuration options into different groups during dump and --help
 * Refactor long ``_reflow()`` implementations, splitting into methods for
