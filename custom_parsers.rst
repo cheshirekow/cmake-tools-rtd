@@ -9,9 +9,9 @@ Using the simple specification
 ------------------------------
 
 You can tell the parser how to interpret your custom commands by specifying the
-format of their call signature using the ``addtitional_commands`` configuration
+format of their call signature using the ``additional_commands`` configuration
 variable. The format of the variable is a dictionary (a mapping in JSON/YAML)
-where the keys should be the name of the command and the values satisfy the
+where the keys should be the name of the commands and the values satisfy the
 following (recursive) schema:
 
 .. code::
@@ -39,7 +39,7 @@ following (recursive) schema:
     # below for more information on tags.
     "tags": [<string>]
 
-    # If true, then this specification will be repeated indefinitately
+    # If true, then this specification will be repeated indefinitely
     "legacy": <bool>,
   }
 
@@ -133,5 +133,5 @@ or
   ...
 
 This tool is still in the early stages of development so don't be surprised if
-it chokes on some of your input files, or if it does not propery generate
+it chokes on some of your input files, or if it does not properly generate
 specifications for your commands.
