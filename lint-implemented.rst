@@ -53,8 +53,8 @@ message
 description
 -----------
 
-Used when a name doesn't doesn't fit the naming convention associated to its
-type (function, macro, variable, ...).
+Used when a name doesn't fit the naming convention associated to its type
+(function, macro, variable, ...).
 
 This message belongs to the basic checker.
 
